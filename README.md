@@ -6,6 +6,6 @@ The task is to make a burger-menu using only `CSS`, without using scripts.<br>_(
 
 ---
 
-![](./images/menu_01.png)
-
 ![](./images/menu_02.png)
+
+![](./images/menu_01.png)
