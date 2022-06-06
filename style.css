@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  background-color: #daecff;
+  color: #555;
+}
+.unrolmenu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.info {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.slogan {
+  width: calc(100% - 60px);
+  padding-left: 20px;
+  color: #555;
+  font-size: 1.2em;
+}
+
+.menu_check {
+  display: none;
+}
+
+.menu_label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu_label::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: #555;
+  box-shadow: 0 10px #555;
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+.menu_label::after {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: #555;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.menu_list {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 60px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 0;
+  background: #fff;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.punkt {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.menu_check:checked ~ .menu_list {
+  height: 200px;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu_check:checked ~ .menu_label::before {
+  transform: rotate(45deg) translateY(0);
+  box-shadow: 0 0 transparent;
+}
+
+.menu_check:checked ~ .menu_label::after {
+  transform: rotate(-45deg) translateY(0);
+}
+
+/* all the rest */
+
+section {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+section h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+section p {
+  font-size: 1.1em;
+}
